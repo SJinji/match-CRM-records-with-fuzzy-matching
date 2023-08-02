@@ -26,11 +26,20 @@ The code has been organized into separate functions, each serving a specific pur
 
 **Improvements:**
 If I had more time, I would consider the following improvements to enhance the code and results:
-1. **Parameter Tuning:** Experiment with different fuzzy matching parameters, such as the threshold for string similarity, to optimize the matching results.
-2. **Handling Missing Values:** Implement advanced techniques to handle missing values and improve the quality of matches.
-3. **Blocking Techniques:** Incorporate blocking techniques to reduce the number of comparisons and improve performance for large datasets.
-4. **Matching Weights:** Assign different weights to different attributes during fuzzy matching to prioritize specific attributes for matching.
-5. **Parallel Processing:** Explore parallel processing to accelerate the fuzzy matching process for large datasets.
+**Improvements:**
 
+1. **Further Preprocessing Website and Phone Number Columns:**
+   - For Website Column: Apart from the existing preprocessing steps, consider removing common top-level domains (TLDs) such as ".com", ".org", ".net", etc., as these may not contribute significantly to matching and may introduce noise.
+   - For Phone Number Column: Implement additional cleaning steps to handle variations in phone number formats, such as removing special characters and country codes. Normalize the phone numbers to a standardized format to ensure better matching.
+2. **Detect Duplicate More Carefully:**
+   - Implement more sophisticated duplicate detection techniques, such as using machine learning-based models, to identify potential duplicates more accurately.
+   - Utilize additional attributes, such as address, region, and country, to improve duplicate detection. For instance, consider using address similarity metrics to identify similar addresses with minor variations (e.g., abbreviations, misspellings).
+   - Explore approximate string matching algorithms, such as Levenshtein distance or Jaccard similarity, to detect potential duplicates based on textual similarity between attributes.
+3. **Parameter Tuning:** Experiment with different fuzzy matching parameters, such as the threshold for string similarity, to optimize the matching results.
+4. **Handling Missing Values:** Implement advanced techniques to handle missing values and improve the quality of matches.
+5. **Blocking Techniques:** Incorporate blocking techniques to reduce the number of comparisons and improve performance for large datasets.
+6. **Matching Weights:** Assign different weights to different attributes during fuzzy matching to prioritize specific attributes for matching.
+7. **Parallel Processing:** Explore parallel processing to accelerate the fuzzy matching process for large datasets.
+   
 **Conclusion:**
 The implemented code successfully performs fuzzy matching between `dataset_A` and `dataset_B`, resulting in potential matches along with their similarity scores. The code demonstrates good modularity, readability, and accuracy in matching. However, there is always room for improvement, and the suggested enhancements can be explored to achieve even better matching results and performance.
